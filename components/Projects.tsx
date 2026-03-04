@@ -1,26 +1,144 @@
 import Image from 'next/image'
 
-const PROJECTS = [
-  {img:'/assets/projects/bms.png', title:'BMS - Inventory & Sales', desc:'Served as a backend Java/Spring Boot developer on an inventory, sales and cash flow management system for a Sri Lankan restaurant chain.'},
-  {img:'/assets/projects/fotmailtrack.png', title:'FotMailTrack', desc:'Flutter mobile application for physical letter tracking at University of Sri Jayewardenepura; integrated with React web and Node.js backends.'},
-  {img:'/assets/projects/ride-healing.png', title:'Ride Healing', desc:'Flutter developer for an overseas ride-hailing app; contributing to Spring Boot backend.'},
-  {img:'/assets/projects/ufsl.png', title:'UFSL Travel App', desc:'Full development and deployment of a Flutter travel app, published to the App Store and Google Play.'}
+type Project = {
+  img: string
+  title: string
+  desc: string
+  tags: string[]
+  tech: string[]
+  role: string
+}
+
+const PROJECTS: Project[] = [
+  {
+    img: '/assets/projects/bms.png',
+    title: 'BMS – Inventory & Sales',
+    desc: 'Backend Java/Spring Boot developer on an inventory, sales and cash flow management system for a Sri Lankan restaurant chain. Designed RESTful APIs and database schemas.',
+    tags: ['Backend', '2023'],
+    tech: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
+    role: 'Backend Developer',
+  },
+  {
+    img: '/assets/projects/fotmailtrack.png',
+    title: 'FotMailTrack',
+    desc: 'Flutter mobile app for physical letter tracking at University of Sri Jayewardenepura. Integrated with a React web portal and Node.js/Express REST backend.',
+    tags: ['Flutter', 'Full-Stack', '2023'],
+    tech: ['Flutter', 'Dart', 'Node.js', 'React', 'MySQL'],
+    role: 'Mobile Lead',
+  },
+  {
+    img: '/assets/projects/ride-healing.png',
+    title: 'Ride Healing',
+    desc: 'Flutter developer for an overseas ride-hailing app. Contributed to the real-time GPS tracking UI and collaborated on the Spring Boot microservices backend.',
+    tags: ['Flutter', 'Mobile', '2024'],
+    tech: ['Flutter', 'Spring Boot', 'Firebase', 'Google Maps'],
+    role: 'Flutter Developer',
+  },
+  {
+    img: '/assets/projects/ufsl.png',
+    title: 'UFSL Travel App',
+    desc: 'End-to-end Flutter travel app — designed, developed, tested and published to both the Apple App Store and Google Play Store.',
+    tags: ['Flutter', 'Published', '2024'],
+    tech: ['Flutter', 'Firebase', 'App Store', 'Google Play'],
+    role: 'Sole Developer',
+  },
 ]
 
-export default function Projects(){
+export default function Projects() {
   return (
-    <section id="projects" className="py-20 container-wide">
-      <h2 className="text-3xl font-bold section-title">Projects</h2>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {PROJECTS.map(p=> (
-          <div key={p.title} className="bg-[rgba(255,255,255,0.02)] p-4 rounded-lg border border-[var(--cardBorder)]">
-            <div className="w-full h-40 relative">
-              <Image src={p.img} alt={p.title} fill style={{objectFit:'cover'}} className="rounded-md"/>
-            </div>
-            <h3 className="mt-3 font-semibold">{p.title}</h3>
-            <p className="text-sm text-gray-300 mt-2">{p.desc}</p>
-          </div>
-        ))}
+    <section id="projects" className="py-24" style={{ background: 'linear-gradient(180deg, transparent 0%, rgba(124,88,252,0.04) 50%, transparent 100%)' }}>
+      <div className="container-wide">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="badge badge-cyan mb-4" style={{ fontFamily: 'Sora,sans-serif' }}>Portfolio</span>
+          <h2 className="section-title block">Featured Projects</h2>
+          <p className="mt-3 text-sm max-w-md mx-auto" style={{ color: 'var(--text-muted)' }}>
+            Real-world apps shipped to production — not just side projects.
+          </p>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+          {PROJECTS.map((p, i) => (
+            <article
+              key={p.title}
+              className="glow-card overflow-hidden group animate-fadeInUp"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              {/* Image */}
+              <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                  src={p.img}
+                  alt={p.title}
+                  fill
+                  style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                  className="group-hover:scale-105"
+                />
+                {/* Gradient overlay */}
+                <div
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(to top, rgba(4,1,26,0.9) 0%, rgba(4,1,26,0.2) 60%, transparent 100%)' }}
+                />
+                {/* Tags */}
+                <div className="absolute top-3 left-3 flex gap-2">
+                  {p.tags.map(t => (
+                    <span key={t} className="badge badge-primary text-xs">{t}</span>
+                  ))}
+                </div>
+                {/* Role */}
+                <div className="absolute bottom-3 left-4">
+                  <span className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'Sora,sans-serif' }}>
+                    🧑‍💻 {p.role}
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-5">
+                <h3
+                  className="text-lg font-semibold mb-2"
+                  style={{ fontFamily: 'Sora,sans-serif', color: 'var(--text)' }}
+                >
+                  {p.title}
+                </h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-muted)' }}>
+                  {p.desc}
+                </p>
+
+                {/* Tech stack */}
+                <div className="flex flex-wrap gap-2">
+                  {p.tech.map(t => (
+                    <span
+                      key={t}
+                      className="px-2 py-0.5 rounded-md text-xs font-medium"
+                      style={{
+                        background: 'rgba(124,88,252,0.1)',
+                        color: '#b9a4ff',
+                        border: '1px solid rgba(124,88,252,0.2)',
+                        fontFamily: 'Inter,sans-serif',
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-12 text-center">
+          <a
+            href="https://github.com/ShanNDilshan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline inline-flex"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" /></svg>
+            View All on GitHub
+          </a>
+        </div>
       </div>
     </section>
   )

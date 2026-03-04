@@ -1,0 +1,79 @@
+act as a professional and really creative website developer using react and other relavent frameworks, (I need to host this on vercell, remember this), and get to know and identify all the design guidelines, responseve guidlines, UI/UX principles, best practices, website optimaxation and SEO,
+
+I need to build my portfolio site, in here, I gave 4 folders, one contains (me) photo of me, 
+
+projects folder contains photos of 
+
+
+.........................................................
+
+act as a professional and really creative website developer using react and other relavent frameworks, (I need to host this on vercell, remember this), and get to know and identify all the design guidelines, responseve guidlines, UI/UX principles, best practices, website optimaxation and SEO,
+
+I need to build my portfolio site, in here, I gave 4 folders, one contains (me) photo of me, 
+
+projects folder contains photos of four projects I have done, 
+
+skills contains all the icons of skills i have,
+
+social contains social medias I am in, 
+
+this should be a single page application,
+
+top nav bar should contain section links (about me, skills, projects, footer), social links (with icons),
+
+below section should contain my photo inside a circul, and a little introduction about me, (I will give this to you)
+
+next section should include all my skills,
+
+next section should include all the projects I have done, (a image followed by a small paragaph about the project, and I will give those paragraphs during development)
+
+next should include hire me section, (when person fill email, subject and text, my email should recieve it) (my email is shanukanimeshdilshan@gmail.com)
+
+and footer should contain social links and text,
+
+after arranging these images in relevent folders, remove these folders, 
+
+take these as design guidelines, but you dont have strictly follow those, these are just to get a idea to you
+
+Design a single-page layout with a clear hierarchy. Start with a fixed, 65px tall navbar using a glass-morphism effect. The main Hero section must be full-viewport, featuring a left-aligned text block and a right-aligned visual. Follow this with a multi-row Skills section, a second full-viewport "break" section for a focused visual, and a Projects section built on a responsive 3-card grid. Conclude with a 3-column footer. The entire experience must be backed by a persistent, 3D rotating star canvas fixed at the lowest z-index to provide constant depth.
+
+Establish a dark, space-themed color palette using a deep purple-black (#030014) for the main background. All primary text and headings should stand out using gradients: a light purple-to-blue gradient (#e59cff to #9cb2ff) for welcome text, and a purple-500-to-cyan-500 gradient for section titles. The primary accent color is #7042f8, used for link hovers. Use #2A0E61 for card borders and shadows. Glass morphism elements like the navbar should use a semi-transparent background (#03001427) with a backdrop-filter: blur(). Buttons must have a glowing-inset-shadow effect (#bf97ff3d) that brightens on hover.
+
+Implement a mobile-first responsive design using 768px (md) as the main breakpoint. Below this breakpoint, the navbar must collapse to a logo and hamburger icon (toggling a dropdown), while the Hero and Projects sections stack vertically (flex-col). Above 768px, the navbar must expand to its full horizontal state, the Hero section must switch to a side-by-side (flex-row) layout, and the Projects section must display its cards in a 3-column horizontal grid. Other sections, like Skills and the Footer, should use flex-wrap to stack naturally on smaller screens.
+
+these are my social links (when clicking social icon, these websites should open in different screen)
+
+github - https://github.com/ShanNDilshan
+linkedin - http://www.linkedin.com/in/shanndilshan
+email - shanukanimeshdilshan@gmail.com
+
+and each skill icons should opens a separate screen (that skills documentation), if you can't find it, ask me, I will provide relevent links
+
+and if you have any doubt, you MUST ask and clarify before building,
+
+my name is Shanuka Dilshan, this website should focus on mobile application development (flutter) and spring-boot side
+
+........................
+
+1. Hi, my name is Shanuka, but you can call me Shan.
+
+I am a Mobile Application Developer with 4 years of experience in Flutter and Java. If you want a carefully engineered, App Store and Play Store-optimized solution instead of just a "vibe-coded" app, you are in the right place.
+
+I also have 1+ years of experience in backend development with Java and Spring Boot—I consider Java my nostalgic programming language. if you wanna know why, or you need to build an app, just DM me!
+
+2. 
+
+bms.png - Served as a backend Java/Spring Boot developer on a project to build an inventory, sales, and cash flow management system for a Sri Lankan restaurant chain.
+
+fotmailtrack.png - Developed the Flutter mobile application for a comprehensive physical letter tracking system at the University of Sri Jayewardenepura. This system is part of a larger architecture, including a React web application and two distinct Node.js/Express.js backends. Following its successful implementation, our team is now scoping requirements for phase 2.
+
+ride-healing.png - Currently serving as the Flutter Developer for an overseas-based ride-hailing application, and contributing to the Spring Boot backend in my free time.
+
+ufsl.png - Managed the full development and deployment lifecycle of a Flutter-based travel mobile application, successfully publishing it to the Apple App Store and Google Play Store.
+
+3. use standerd ones
+
+4. use option C
+
+5. I'm ok with these.
+
